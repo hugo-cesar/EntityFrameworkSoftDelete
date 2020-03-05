@@ -24,11 +24,11 @@ namespace EntityFrameworkSoftDelete.Controllers
         }
 
         [HttpPost]
-        public Chamado Post([FromBody]Chamado product)
+        public Chamado Post([FromBody]Chamado chamado)
         {
-            _dataContext.Chamados.Add(product);
+            _dataContext.Chamados.Add(chamado);
             _dataContext.SaveChanges();
-            return product;
+            return chamado;
         }
 
     }
